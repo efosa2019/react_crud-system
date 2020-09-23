@@ -19,7 +19,7 @@ export const AddUser = () => {
     history.push("/");
   };
 
-  const onChange = e => {
+  const myChangeHandler = e => {
     setName(e.target.value);
   };
 
@@ -30,7 +30,7 @@ export const AddUser = () => {
         <Input
           type="text"
           value={name}
-          onChange={onChange}
+          onChange={myChangeHandler}
           name="name"
           placeholder="Enter user name"
           required
