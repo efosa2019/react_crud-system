@@ -17,7 +17,7 @@ export const UserList = () => {
                 <Link
                   to={`/edit/${user.id}`}
                   color="warning"
-                  className="btn btn-warning mr-1"
+                  className="btn btn-outline-warning mr-1"
                 >
                   Edit
                 </Link>

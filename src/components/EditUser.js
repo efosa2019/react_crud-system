@@ -18,7 +18,7 @@ export const EditUser = props => {
     setSelectedUser(selectedUser);
   }, [currentUserId, users]);
 
-  const onChange = e => {
+  const myChangeHandler = e => {
     setSelectedUser({
       ...selectedUser,
       [e.target.name]: e.target.value,
@@ -34,20 +34,20 @@ export const EditUser = props => {
   return (
     <Form onSubmit={onSubmit}>
       <FormGroup>
-        <Label> Name </Label>{" "}
+        <Label> Name </Label>
         <Input
           type="text"
           value={selectedUser.name}
-          onChange={onChange}
+          onChange={myChangeHandler}
           name="name"
           placeholder="Enter user"
           required
-        ></Input>{" "}
-      </FormGroup>{" "}
-      <Button type="submit"> Edit Name </Button>{" "}
+        ></Input>
+      </FormGroup>
+      <Button type="submit">Edit Name</Button>
       <Link to="/" className="btn btn-danger ml-2">
-        Cancel{" "}
-      </Link>{" "}
+        Cancel
+      </Link>
     </Form>
   );
 };
